@@ -71,6 +71,7 @@ const imageminPngquant = (options = {}) => input => {
 			throw error;
 		});
 
+	subprocess.stdout = subprocess.stdout || {};
 	subprocess.stdout.then = promise.then.bind(promise); // eslint-disable-line promise/prefer-await-to-then
 	subprocess.stdout.catch = promise.catch.bind(promise);
 
